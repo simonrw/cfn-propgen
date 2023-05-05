@@ -1,7 +1,6 @@
 from cfn_propgen import gen_service
 
 def test_generate_minimal_service():
-    definition = gen_service.ssm()
+    template = gen_service.for_type("AWS::SSM::Parameter")
 
-    assert definition["Type"] == "AWS::SSM::Parameter"
-    assert set(definition["Properties"].keys()) == set(["Type", "Name"])
+    assert set(template["Properties"].keys()) == set(["Type", "Value"])
