@@ -40,7 +40,7 @@ class Generator:
             warnings.simplefilter("ignore")
             props = schema_generator.generate_schema_strategy(schema).example()
 
-        return {"Type": type, "Properties": props}
+        return {"Type": schema["typeName"], "Properties": props}
 
 
 class SchemaFetcher:
