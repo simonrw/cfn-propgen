@@ -384,7 +384,9 @@ class ResourceGenerator:
                 max_length = schema.get("maxLength")
                 return text(
                     alphabet=characters(
-                        min_codepoint=1, blacklist_categories=("Cc", "Cs")
+                        min_codepoint=ord("a"),
+                        max_codepoint=ord("z"),
+                        blacklist_categories=("Cc", "Cs"),
                     ),
                     min_size=min_length,
                     max_size=max_length,
