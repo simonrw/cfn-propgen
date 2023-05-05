@@ -40,9 +40,6 @@ class Generator:
         return {"Type": type, "Properties": filtered_props}
 
 
-gen_service = Generator.from_file(SCHEMA_FILE)
-
-
 class SchemaFetcher:
     def __init__(self):
         self.ensure_schema()
@@ -76,3 +73,4 @@ class SchemaFetcher:
 
 
 schema_fetcher = SchemaFetcher()
+gen_service = Generator.from_file(SCHEMA_FILE)
