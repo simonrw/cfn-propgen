@@ -27,17 +27,20 @@ class Generator:
 
     def for_type(self, type: str) -> dict:
         schema = self.resources[type]
+        required_keys = schema.get("required", [])
+        # remove any key that's not required
+        schema["properties"] = {
+            key: value
+            for (key, value) in schema["properties"].items()
+            if key in required_keys
+        }
         schema_generator = generators.ResourceGenerator(schema)
         # we ignore the warning about not using `example` in tests
         with warnings.catch_warnings():
             warnings.simplefilter("ignore")
             props = schema_generator.generate_schema_strategy(schema).example()
 
-        required_keys = schema.get("required", [])
-        filtered_props = {
-            key: value for (key, value) in props.items() if key in required_keys
-        }
-        return {"Type": type, "Properties": filtered_props}
+        return {"Type": type, "Properties": props}
 
 
 class SchemaFetcher:
