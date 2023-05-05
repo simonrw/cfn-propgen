@@ -4,16 +4,8 @@
 #
 #    pip-compile dev-requirements.in
 #
--e file:///Users/simon/dev/cfn-propgen
-    # via -r dev-requirements.in
-appnope==0.1.3
-    # via ipython
 asttokens==2.2.1
     # via stack-data
-attrs==23.1.0
-    # via
-    #   hypothesis
-    #   jsonschema
 backcall==0.2.0
     # via ipython
 black==23.3.0
@@ -23,13 +15,9 @@ click==8.1.3
 decorator==5.1.1
     # via ipython
 exceptiongroup==1.1.1
-    # via
-    #   hypothesis
-    #   pytest
+    # via pytest
 executing==1.2.0
     # via stack-data
-hypothesis==6.75.2
-    # via cfn-propgen
 iniconfig==2.0.0
     # via pytest
 ipython==8.13.2
@@ -38,14 +26,10 @@ jedi==0.18.2
     # via
     #   ipython
     #   pudb
-jsonschema==4.17.3
-    # via cfn-propgen
 matplotlib-inline==0.1.6
     # via ipython
 mypy-extensions==1.0.0
     # via black
-ordered-set==4.1.0
-    # via cfn-propgen
 packaging==23.1
     # via
     #   black
@@ -75,8 +59,6 @@ pygments==2.15.1
     # via
     #   ipython
     #   pudb
-pyrsistent==0.19.3
-    # via jsonschema
 pytest==7.3.1
     # via
     #   -r dev-requirements.in
@@ -85,8 +67,6 @@ pytest-pudb==0.7.0
     # via -r dev-requirements.in
 six==1.16.0
     # via asttokens
-sortedcontainers==2.4.0
-    # via hypothesis
 stack-data==0.6.2
     # via ipython
 tomli==2.0.1
