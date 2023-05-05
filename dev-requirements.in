@@ -2,4 +2,5 @@
 pytest
 ipython
 black
+pytest-pudb
 -e .

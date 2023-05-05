@@ -30,6 +30,8 @@
             postVenvCreation = ''
               python -m pip install pip-tools
             '';
+
+            PYTHONBREAKPOINT = "pudb.set_trace";
           };
         };
       }
