@@ -380,7 +380,7 @@ class ResourceGenerator:
             try:
                 regex = schema["pattern"]
             except KeyError:
-                min_length = schema.get("minLength", 0)
+                min_length = schema.get("minLength", 1)
                 max_length = schema.get("maxLength")
                 return text(
                     alphabet=characters(
