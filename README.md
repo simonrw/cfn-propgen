@@ -4,7 +4,7 @@ Generate a "valid"[^1] CloudFormation resource (in yaml or json) for scaffolding
 
 ## Implementation
 
-We ~steal~borrow the resource generation from the [cloudformation CLI](https://github.com/aws-cloudformation/cloudformation-cli), which in turn uses Hypothesis to generate random values from a given set.
+We ~steal~borrow the resource generation from the [cloudformation CLI](https://github.com/aws-cloudformation/cloudformation-cli/blob/e615ac892d311fe77a07a333a923364d5d4d5151/src/rpdk/core/contract/resource_generator.py#L56), which in turn uses Hypothesis to generate random values from a given set.
 
 ## Contributing
 
